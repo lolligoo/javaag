@@ -1,3 +1,9 @@
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Arrays;
+
 public class BinarySearch {
     public static int rank(int key, int[] a){
         int lo = 0;
@@ -11,7 +17,12 @@ public class BinarySearch {
         return -1;
     }
     public static void main(String[] args){
-        //int[] whitelist = In.readInts(args[0]);
-        //Arrays.sort(whitelist);
+        int[] whitelist = In.readInts(args[0]);
+        Arrays.sort(whitelist);
+        while(!StdIn.isEmpty()){
+            int key = StdIn.readInt();
+            if(rank(key, whitelist) < 0 )
+                StdOut.println(key);
+        }
     }
 }

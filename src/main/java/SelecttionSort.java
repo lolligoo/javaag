@@ -1,3 +1,5 @@
+import edu.princeton.cs.algs4.StdDraw;
+
 public class SelecttionSort {
     public static int[] SelectSort(int[] arr){
         int small;
