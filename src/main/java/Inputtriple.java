@@ -44,7 +44,7 @@ public class Inputtriple {
         b = StdIn.readInt();
         c = StdIn.readInt();
         if(a == b && b == c && a == c){
-            System.out.println("equal");
+            System.out.println("equal ");
         }else{
             System.out.println("not equal");
         }
