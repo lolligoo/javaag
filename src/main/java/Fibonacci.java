@@ -13,8 +13,9 @@ public class Fibonacci {
     }
     public static void f(int M){
         double f = 0, g = 1;
+        int[] arr = new int[M];
         for(int i = 0 ; i <= M ;i++) {
-            StdOut.println(f);
+            arr[i] = (int) f;
             f = f + g;
             g = f - g;
         }

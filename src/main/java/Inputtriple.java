@@ -3,7 +3,20 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class Inputtriple {
     public static void main(String[] arg){
-        StdOut.println(mystery(2,26));
+        String s = "Hello World";
+        s.concat(s).indexOf(s);
+        s.toUpperCase();
+        s.substring(6, 11);
+        StdOut.println(s);
+        String string1 = "hello";
+        String string2 = string1;
+        string1 = "world";
+        StdOut.println(string1);
+        StdOut.println(string2);
+        StdOut.println(ln(10));
+        StdOut.println(Math.log(10*9*8*7*6*5*4*3*2));
+        StdOut.println(exR1(6));
+        StdOut.println(mystery(2,25));
         StdOut.println(mystery(3,11));
         int[] xa = {1,2,3,4,5,6,7,2,3,4,5,7};
         int M = 5;
@@ -87,8 +100,16 @@ public class Inputtriple {
         if (b == 0)
             return 0;
         if (b % 2 == 0)
-            return mystery( a * a, b / 2);
-        return mystery( a * a, b / 2) * a;
+            return mystery( a + a, b / 2);
+        return mystery( a + a, b / 2) + a;
     }
-
+    public static String exR1(int n){
+        if (n <= 0) return "";
+        return exR1(n-3) + n + exR1(n-2) + n;
+    }
+    //ln(N!)
+    public static double ln(int N){
+        if(N == 1) return Math.log(N);
+        return Math.log(N) + ln(N-1);
+    }
 }
