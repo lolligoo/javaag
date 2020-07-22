@@ -5,6 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class Parentheses {
     public static void main(String[] args) {
         Stack<String> st = new Stack<>();
+        Boolean result = true;
         while(!StdIn.isEmpty()){
             String item = StdIn.readString();
             if("(".equals(item) || "[".equals(item) || "{".equals(item) ){
@@ -13,24 +14,30 @@ public class Parentheses {
             if(!st.isEmpty()){
                 if(")".equals(item)){
                     if(!"(".equals(st.pop())){
-                        StdOut.println("false");
+                        result = false;
                         return;
                     }
                 }
                 if("]".equals(item)){
                     if(!"[".equals(st.pop())){
-                        StdOut.println("false");
+                        result = false;
                         return;
                     }
                 }
                 if("}".equals(item)){
                     if(!"{".equals(st.pop())){
-                        StdOut.println("false");
+                        result = false;
                         return;
                     }
                 }
+            }else{
+                result = false;
             }
         }
-        StdOut.println("true");
+        if(result && st.isEmpty()){
+            StdOut.println("true");
+        }else{
+            StdOut.println("false");
+        }
     }
 }
