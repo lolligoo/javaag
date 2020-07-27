@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class Parentheses {
     public static void main(String[] args) {
         Stack<String> st = new Stack<>();
-        Boolean result = true;
+        boolean result = true;
         while(!StdIn.isEmpty()){
             String item = StdIn.readString();
             if("(".equals(item) || "[".equals(item) || "{".equals(item) ){
